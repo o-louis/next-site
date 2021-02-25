@@ -7,9 +7,14 @@ const Pokedex = ({ pokemons }) => {
       <Head>
         <title>Pokedex</title>
       </Head>
-      <div className="grid justify-items-center grid-col-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+      <div className="py-8 mx-auto max-w-5xl grid justify-items-center grid-col-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {pokemons.map(({ name, img }, id) => (
-          <Pokemon className="max-w-xs w-9/12" src={img} alt={name} key={id} />
+          <Pokemon
+            className="max-w-xs w-5/12 lg:w-7/12"
+            src={img}
+            alt={name}
+            key={id}
+          />
         ))}
       </div>
     </div>
